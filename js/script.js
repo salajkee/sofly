@@ -59,10 +59,11 @@ try {
 	let swiper = new Swiper('.reviews__slider', {
 		slidesPerView: 3,
 		spaceBetween: 20,
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-		},
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// },
+		loop: true,
 		navigation: {
 			nextEl: '.reviews__slider-next',
 			prevEl: '.reviews__slider-prev',
@@ -81,17 +82,17 @@ try {
 				spaceBetween: 20,
 			},
 		},
-		on: {
-			init() {
-				this.el.addEventListener('mouseenter', () => {
-					this.autoplay.stop();
-				});
+		// on: {
+		// 	init() {
+		// 		this.el.addEventListener('mouseenter', () => {
+		// 			this.autoplay.stop();
+		// 		});
 
-				this.el.addEventListener('mouseleave', () => {
-					this.autoplay.start();
-				});
-			},
-		},
+		// 		this.el.addEventListener('mouseleave', () => {
+		// 			this.autoplay.start();
+		// 		});
+		// 	},
+		// },
 	});
 } catch (e) {}
 
